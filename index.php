@@ -13,7 +13,7 @@
     <br><br>
     <section id="content">
         <h2>Fernandez Ferdinand's Portfolio</h2>     
-        <a href="#" onclick="loadContent('fer.php')">Click</a>
+        <a href="#" onclick="loadContent('Fer.php')">Click</a>
     </section>
     <section id="content">
         <h2>Lester's Portfolio</h2>     
