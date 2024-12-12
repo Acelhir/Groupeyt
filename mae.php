@@ -20,7 +20,7 @@ $content = file_get_contents("content/home.txt");
 
         <nav class="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>

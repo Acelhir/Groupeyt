@@ -12,7 +12,7 @@
         <a href="#home"><img class="logo" src="pictures/Untitled design.png" alt="logo"></a>
         <nav>
           <ul class="nav">
-            <li><a href="#home" class="home">Home</a></li>
+            <li><a href="index.php" class="home">Home</a></li>
             <li><a href="#projects">Project</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#school">School</a></li>
