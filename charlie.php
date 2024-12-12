@@ -20,7 +20,7 @@ if (file_exists($contentFile)) {
   <header class="navbar">
     <nav>
       <ul class="nav-links">
-        <li><a href="home.php">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="abouts.php">About</a></li>
         <li><a href="skills.php">Skills</a></li>
         <li><a href="projects.php">Projects</a></li>
