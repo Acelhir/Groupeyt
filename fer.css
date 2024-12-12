@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top:2rem ;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins",sans-serif;
+}
+
+body {
+    height: 100vh; /* Make the body height 100% of the viewport */
+    background-color: #241a3d;
+}
+
+li, a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #EEEEEE;
+    text-decoration: none;
+    list-style-type: none;
+}
+.logo {
+    width: 150px;
+    margin-left: 100px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 7%;
+  background-color: #17153B;
+}
+.nav li {
+    display: inline-block;
+    padding: 0px 25px;
+}
+.nav li a {
+    transition: all -.3s ease 0s;
+}
+.nav li a:hover {
+    color: #C8ACD6;
+}
+.index {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 4rem;
+  background-color: #2E236C;
+  min-height: 99.9vh;
+  width: 100%;
+  padding: 0rem 5% 0rem; /* Reduced padding */
+  color: #dec9e9;
+}
+
+.img {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left:  50px; /* Remove extra space on the left */
+}
+
+
+.img img {
+  width: 500px; /* Adjust image size */
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.img img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 15px 25px #dec9e9;  /* Enhance shadow on hover */
+}
+
+
+.text { /* Center the paragraph block */
+    max-width: 600px; /* Limit the width for better readability */
+    text-align: justify; /* Justify the text for clean alignment */
+    line-height: 1.8; /* Improve spacing between lines */
+    font-size: 18px; /* Set a readable font size */
+    color: #dec9e9; /* Use a light color to match your theme */
+}
+.index .about-me h1{
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 2;
+}
+span {
+    color: rgb(255, 255, 255);
+}
+.index .about-me h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+}
+.btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 602px; /* Slightly adjusted width for better spacing */
+    height: 50px;
+}
+
+.btn a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(135deg, #6c63ff, #9f86ff); /* Gradient background */
+    border: none; /* Remove border for a modern look */
+    border-radius: 25px; /* Smooth rounded edges */
+    font-size: 18px;
+    color: rgb(255, 255, 255); /* Contrast text color */
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.5); /* Enhance shadow on hover */
+    opacity: 90%; /* Slight transparency */
+}
+
+.btn a:active {
+    transform: scale(0.95); /* Shrink slightly when clicked */
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3); /* Dim shadow on click */
+}
+
+.social-links {
+    position: absolute; /* Positioned relative to the page */
+    top: 53%; /* Center vertically */
+    right: 200px; /* Aligned to the right */
+    transform: translateY(-50%); /* Perfect centering */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack icons vertically */
+    gap: 35px; /* Space between the icons */
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Size of the circle */
+    height: 60px;
+    background: linear-gradient(135deg, #6c63ff, #9f86ff); /* Gradient background */
+    border: none; /* No border for a cleaner look */
+    border-radius: 50%; /* Make the links circular */
+    color: rgb(255, 255, 255);/* White icon color */
+    font-size: 25px;
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3); /* Soft glowing shadow */
+    transition: all 0.3s ease; /* Smooth animations */
+}
+
+.social-links a:hover {
+    box-shadow: 0 10px 20px rgba(108, 99, 255, 0.5), 0 0 20px rgba(108, 99, 255, 0.7); /* Enhance glow on hover */
+    transform: scale(1.2); /* Slightly enlarge */
+    background: linear-gradient(135deg, #9f86ff, #c299ff); /* Change gradient on hover */
+}
+
+.social-links a:active {
+    transform: scale(1); /* Reset size when clicked */
+    box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2); /* Dim shadow */
+    background: linear-gradient(135deg, #6c63ff, #9f86ff); /* Reset gradient */
+}
+
+
+.index-page {
+  height: 96vh;
+  background-color: #17153B;
+  color: #dec9e9;
+}
+:root {
+    --card-height: 340px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    border-radius: 5px;
+  }
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border-radius: 5px;
+  }
+  .card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+  }
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+  }
+  .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+    border-radius: 5px;
+  }
+  .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+    border-radius: 5px;
+  }
+  .card:hover .wrapper::before,
+  .wrapper::after {
+    opacity: 1;
+  }
+  .card:hover .wrapper::after {
+    height: 120px;
+  }
+  .title {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  .card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  /* Add this to organize the cards in a grid layout */
+.card-section {
+    display: grid;
+    transform: translateY(-105%); /* Perfect centering */
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 50px; /* Space between cards */
+    margin-left: auto; /* Push to the right side */
+    max-width: 60%; /* Limit the width of the card section */
+  }
+  
+  /* Ensure the card dimensions and styling are maintained */
+  .card {
+    margin: 0; /* Remove additional margins as the grid handles spacing */
+  }
+  .text-section {
+    display:flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    max-width: 400px; /* Optional: Limit the width of the text section */
+    margin-left: 120px; /* Center horizontally */
+  }
+  
+  .text-section h1 {
+    padding-top: 50px;
+    margin-bottom: 10px; /* Space below the h1 */
+    font-size: 70px;
+  }
+  
+  .text-section h3 {
+    margin-bottom: 15px;
+    font-size: 23px; /* Space below the h3 */
+    color: rgb(255, 255, 255);
+  }
+  
+  .text-section p {
+    margin-bottom: 10; /* Space below the paragraph */
+    line-height: 1.6; /* Better line spacing for readability */
+  }
+  
+  .text-section img {
+    width: 150%; /* Make the image responsive */
+    max-width: 500; /* Optional: Limit the image's maximum width */
+    margin-top: 20px; /* Space above the image */
+  }
+
+
+
+
+
+  .index-page1 {
+    min-height: 96.5vh;
+    background-color: #17153B;
+    color: #EEEEEE;
+    padding: 35px 10%;
+  }
+  .index-page1 .skills {
+    max-width: 700px;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .skills h1{
+    font-weight: 800px;
+    font-size: 70px;
+    color: #dec9e9;
+  }
+  .index-page1 .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+  .row .col {
+    flex-basis: 46%;
+  }
+  .row .sub-title h2{
+    position: relative;
+    color: #dec9e9;
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .row .sub-title h2::before{
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 125%;
+    left: 0;
+    content: '';
+    background-color: #dec9e9;
+  }
+  .subject {
+    font-size: 18px;
+    font-weight: thin;
+    color: #dec9e9;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+  .bar {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #dec9e9;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  .bar::after {
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+  }
+  .line {
+    position: absolute;
+    width: 0%;
+    height: 7px;
+    background-color: #f82991;
+    border-radius: 15px;
+    top: -1px;
+    animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      width: 100%;
+    }
+  }
+  .line::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #f82991;
+  }
+
+
+
+  .index-page2 {
+    height: 90vh;
+    background-color: #2E236C;
+    color: #dec9e9;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange children horizontally */
+    justify-content: space-between; /* Distribute space between content */
+    align-items: center; /* Vertically align content */
+    padding-top: 60px;
+  }
+  
+  .content1 {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .text-section1 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    max-width: 600px; /* Optional: Limit the width of the text section */
+    margin-left: 160px;
+  }
+  
+  .text-section1 h1 {
+    font-size: 70px;
+  }
+  
+  .text-section1 h3 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .text-section1 p {
+    line-height: 1.6;
+  }
+  
+  .text-section1 img {
+    width: 150%;
+    max-width: 500;
+    margin-top: 20px;
+  }
+  
+  .right-images {
+    padding: 20px; /* Add some padding */
+    display: flex; /* Arrange images horizontally */
+    flex-direction: column; /* Stack images vertically */
+    gap: 50px; /* Add space between images */
+    align-items: flex-end; /* Align images to the right */
+    flex: 1; /* Take up remaining space */
+    padding-right: 200px;
+    padding-top: 70px;
+  }
+  
+  figure {
+    width: 600px; /* Adjust figure width */
+    aspect-ratio: 8 / 5;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  .dynamic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the figure */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  figure:hover .dynamic-image {
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+
+.index-page3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center; /* Spread items across the page */
+  align-items: center;
+  background-color: #2E236C;
+  color: #dec9e9;
+  padding: 2rem 10%;
+}
+/* General Styles */
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contents {
+  display: flex;
+  background: #17153B;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #dec9e9;
+  padding: 20px;
+  width: 1200px; /* Adjust size */ 
+  max-width: 1200px;
+  color: #333;
+}
+
+/* Left Section (Profile Image) */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.image-box img {
+  width: 300px; /* Adjust image size */
+  height: auto;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.imgss img {
+  width: 200px; /* Set the width you prefer */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Optional: Add hover animation */
+  margin-left: 45px;
+}
+
+/* Optional: Add hover effect */
+.imgss img:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+/* Middle Section (Contact Details) */
+.middle {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.details i {
+  font-size: 24px;
+  color: #6c63ff;
+  padding-right:10px;
+}
+
+.details .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.topik {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #6c63ff;
+}
+
+.text-one,
+.text-two {
+  font-size: 14px;
+  color: #dec9e9;
+}
+
+/* Right Section (Form) */
+.right-side {
+  flex: 1.5;
+  padding: 20px;
+}
+
+.topic-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #EEEEEE;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-box textarea {
+  height: 80px;
+  resize: none;
+}
+
+.button input {
+  background: #6c63ff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.button input:hover {
+  background: #584dff;
+}
+
+/* Animation for image */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Disable responsiveness */
+@media (max-width: 768px) {
+  .contents {
+      flex-direction: row; /* Prevent stacking */
+  }
+}
+
+.social-links3 {
+  flex: 1; /* Allow the social links to take up proportionate space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center links vertically */
+  gap: 40px;
+}
+
+.social-links3 a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6c63ff, #9f86ff);
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-links3 a:hover {
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.5), 0 0 20px rgba(108, 99, 255, 0.7);
+  transform: scale(1.2);
+  background: linear-gradient(135deg, #9f86ff, #c299ff);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #C8ACD6; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #17153B; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #dec9e9; 
+}
